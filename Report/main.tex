@@ -1,0 +1,29 @@
+\documentclass[a4paper]{report}
+
+% Load settings and packages from the merged config file
+\input{template/commands}
+\input{template/config}
+
+\begin{document}
+
+% Title page
+\input{chapters/0-titlepage}
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% Include chapters
+\input{chapters/1-introduction}
+\input{chapters/2-feasibility-analysis}
+\input{chapters/3-project-planning}
+\input{chapters/4-analysis-of-requirements}
+\input{chapters/5-design}
+\input{chapters/6-implementation}
+\input{chapters/7-conclusion}
+
+
+% Print the bibliography
+\printbibliography[heading=bibintoc]
+
+\end{document}

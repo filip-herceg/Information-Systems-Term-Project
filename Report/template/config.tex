@@ -1,0 +1,126 @@
+% Begin config.tex
+
+% Package imports and configurations
+\usepackage[table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{csquotes}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+
+% Remove intendation from paragraphs
+\setlength{\parindent}{0pt}
+
+% Font packages
+\usepackage{fontspec}
+\setmainfont{Carlito}
+\setsansfont{Lato}
+
+% Bibliography management with biblatex
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{bibliography/references.bib}
+
+
+% Customizing the code listing style
+\lstset{
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    frame=single,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+% Geometry and page layout settings
+\usepackage{geometry}
+\geometry{a4paper, margin=1in, marginparsep=7pt, marginparwidth=.6in}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Colors
+\definecolor{primary}{HTML}{219BFF}
+\definecolor{secondary}{HTML}{C582F0}
+\definecolor{tertiary}{HTML}{D34FEA}
+\definecolor{quaternary}{HTML}{C35FDA}
+% \definecolor{success}{RGB}{40, 167, 69}
+% \definecolor{danger}{RGB}{220, 53, 69}
+% \definecolor{warning}{RGB}{255, 193, 7}
+% \definecolor{info}{RGB}{23, 162, 184}
+% \definecolor{light}{RGB}{248, 249, 250}
+% \definecolor{dark}{RGB}{52, 58, 64}
+
+% Customize the look of section titles
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\Huge\bfseries\color{primary}}{\thechapter}{1.5em}{}
+\titlespacing*{\chapter}{0pt}{2em}{1em}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{secondary}}{\thesection}{1.5em}{}
+\titlespacing*{\section}{0pt}{1.5em}{0.75em}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{tertiary}}{\thesubsection}{1.2em}{}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.6em}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{quaternary}}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.5em}
+
+\titleformat{\paragraph}
+  {\normalfont\normalsize\bfseries\color{primary}}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{0.75em}{0.5em}
+
+\titleformat{\subparagraph}
+  {\normalfont\normalsize\bfseries\color{secondary}}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{0.75em}{0.5em}
+
+% Ensure all section levels are included in the TOC
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+% Table of contents settings
+\usepackage{tocloft}
+\renewcommand{\cftchapfont}{\bfseries\color{primary}}
+\renewcommand{\cftsecfont}{\bfseries\color{secondary}}
+\renewcommand{\cftsubsecfont}{\color{tertiary}}
+\renewcommand{\cftsubsubsecfont}{\color{quaternary}}
+\renewcommand{\cftparafont}{\color{primary}}
+\renewcommand{\cftsubparafont}{\color{secondary}}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftparaleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubparaleader}{\cftdotfill{\cftdotsep}}
+
+% Hyperlinks settings
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+}
+
+% Footnote configuration and other custom settings
+\setlength{\footnotesep}{0.4cm}
+
+% Set table row paddings
+\setlength{\tabcolsep}{18pt} % Gap before text Starts
+\renewcommand{\arraystretch}{3} % Cell Height scaling
+\setlength{\arrayrulewidth}{0.1mm} % Border width
+
+
+% End of config.tex
+

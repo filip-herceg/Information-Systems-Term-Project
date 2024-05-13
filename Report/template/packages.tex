@@ -1,0 +1,33 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+
+% Font packages
+\usepackage{fontspec} % Allows font customization
+\setmainfont{Carlito} % Main document font, similar to Calibri
+\setsansfont{Lato} % Sans-serif font for headings
+
+% Bibliography management with biblatex
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{bibliography/references.bib}
+
+% Package for formatting program code
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Customizing the code listing style
+\lstset{
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    frame=single,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+% Hyperref setup, loaded last to avoid option clashes
+\usepackage[hidelinks]{hyperref}
+
+% Lorem ipsum generator
+\usepackage{lipsum}

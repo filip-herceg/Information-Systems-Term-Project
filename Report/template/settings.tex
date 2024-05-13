@@ -1,0 +1,59 @@
+\usepackage{geometry}
+\geometry{a4paper, margin=1in, marginparsep=7pt, marginparwidth=.6in}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % No line in header area
+
+\usepackage{xcolor}
+% Define new appealing colors
+\definecolor{primary}{RGB}{52, 73, 94} % Midnight Blue
+\definecolor{secondary}{RGB}{46, 204, 113} % Emerald
+\definecolor{tertiary}{RGB}{241, 196, 15} % Sunflower
+\definecolor{quaternary}{RGB}{231, 76, 60} % Alizarin
+
+% Customize the look of section titles
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\Huge\bfseries\color{primary}}{\thechapter}{1em}{}
+\titleformat{\section}
+  {\normalfont\LARGE\bfseries\color{secondary}}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\Large\bfseries\color{tertiary}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries\color{quaternary}}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}
+  {\normalfont\normalsize\bfseries\color{primary}}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}
+  {\normalfont\normalsize\bfseries\color{secondary}}{\thesubparagraph}{1em}{}
+
+% Table of contents settings
+\usepackage{tocloft}
+\renewcommand{\cftchapfont}{\bfseries\color{primary}}
+\renewcommand{\cftsecfont}{\bfseries\color{secondary}}
+\renewcommand{\cftsubsecfont}{\color{tertiary}}
+\renewcommand{\cftsubsubsecfont}{\color{quaternary}}
+\renewcommand{\cftparafont}{\color{primary}}
+\renewcommand{\cftsubparafont}{\color{secondary}}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftparaleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubparaleader}{\cftdotfill{\cftdotsep}}
+
+% Hyperlinks settings
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+% Footnote configuration and other custom settings
+\setlength{\footnotesep}{0.4cm}
