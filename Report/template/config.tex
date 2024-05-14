@@ -12,6 +12,8 @@
 \usepackage{array}
 \usepackage[most]{tcolorbox}
 \usepackage{listings}
+\usepackage{acronym}
+\usepackage{float}
 
 % Remove intendation from paragraphs
 \setlength{\parindent}{0pt}
@@ -120,6 +122,22 @@
 \setlength{\tabcolsep}{18pt} % Gap before text Starts
 \renewcommand{\arraystretch}{3} % Cell Height scaling
 \setlength{\arrayrulewidth}{0.1mm} % Border width
+
+% Commands for front matter with Roman numerals
+\newcommand{\frontmatterRoman}{
+    %\frontmatter
+    \renewcommand{\thechapter}{\Roman{chapter}}
+}
+
+% Commands for main matter with Arabic numerals
+\newcommand{\mainmatterArabic}{
+    %\mainmatter
+    \renewcommand{\thechapter}{\arabic{chapter}}
+    \setcounter{chapter}{0}  % Restart chapter numbering
+}
+
+% Set graphics path
+\graphicspath{ {assets/} }
 
 
 % End of config.tex

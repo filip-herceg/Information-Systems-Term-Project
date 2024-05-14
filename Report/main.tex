@@ -4,7 +4,9 @@
 \input{template/commands}
 \input{template/config}
 
+
 \begin{document}
+\frontmatterRoman
 
 % Title page
 \input{chapters/0-titlepage}
@@ -13,6 +15,23 @@
 \tableofcontents
 \newpage
 
+% List of Figures
+\input{preliminary-chapters/list-of-figures}
+\newpage
+
+% List of Tables
+\input{preliminary-chapters/list-of-tables}
+\newpage
+
+% List of Code
+\input{preliminary-chapters/list-of-code}
+\newpage
+
+% List of Abbreviations
+\input{preliminary-chapters/acronyms}
+\newpage
+
+\mainmatterArabic
 % Include chapters
 \input{chapters/1-introduction}
 \input{chapters/2-feasibility-analysis}

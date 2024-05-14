@@ -1,9 +1,63 @@
 \chapter{Project Planning}
 \label{ch:project-planning}
+This section outlines the project planning for the development of an online booking system. The planning includes the estimation of the project timeframe using function point analysis and a detailed project plan represented through a Gantt chart.
 
 \section{Estimation of Project Time Frame}
 \label{sec:estimation-of-project-time-frame}
+To estimate the project timeframe, we'll employ the \ac{FPA} method based on Jeffrey et al., 1993. \ac{FPA} is a standardized method used to measure the functionality delivered by the system, which helps in estimating the time, resources, and effort required for development.
+
+\subsection*{Steps Involved in Function Point Analysis:}
+\begin{enumerate}
+    \item \textbf{Identify Functional Requirements:} This includes inputs, outputs, user interactions, data files, and external interfaces associated with the system.
+    \item \textbf{Classify the Complexity of Each Function:} Functions are categorized as simple, average, or complex.
+    \item \textbf{Assign Weight to Each Function:} Based on their complexity, functions are assigned a predefined weight.
+    \item \textbf{Calculate the Total Function Points:} Sum up the weighted functions to get the total function points for the project.
+    \item \textbf{Determine Effort:} Using historical data and average hours per function point, calculate the total effort required.
+    \item \textbf{Estimate Time Frame:} Convert the effort into a timeframe, accounting for the number of team members and working hours per day.
+\end{enumerate}
+
+\subsection*{Example Calculation:}
+\begin{itemize}
+    \item Assume the system has 80 function points
+    \item Historical data suggests 2 hours per function point
+    \item Total estimated effort = 80 FP x 2 hours = 160 hours
+    \item With a team of 4 developers, each working 2 hours a day, the estimated time frame is $\frac{160 \text{ hours}}{4 \text{ developers} \times 2\ \frac{\text{hours}}{\text{day}}} = 20 \text{ working days}$
+\end{itemize}
 
 \section{Project Plan}
 \label{sec:project-plan}
+For the project plan, a Gantt chart is utilized to visualize the schedule, showing the start and finish dates of the project components. This chart helps in tracking project progress and ensures all team members are aware of their responsibilities and deadlines.
 
+\subsection*{Steps to Create a Gantt Chart:}
+\begin{enumerate}
+    \item \textbf{List All Activities:} Break down the project into manageable tasks, such as requirement analysis, design, coding, testing, etc.
+    \item \textbf{Sequence Activities:} Arrange tasks in the order they need to be completed.
+    \item \textbf{Estimate Duration:} Assign a duration to each task based on the function point analysis.
+
+    \item \textbf{Assign Resources:} Allocate team members to each task based on their skills and task requirements.
+    \item \textbf{Develop the Schedule:} Input the activities, their sequence, duration, and resources into a Gantt chart software to create the schedule.
+\end{enumerate}
+
+\subsection*{Gantt Chart Example:}
+\begin{itemize}
+    \item Tools like Microsoft Project or free online tools like GanttProject can be used
+    \item The chart includes major tasks such as:
+    \begin{itemize}
+        \item Requirements gathering
+        \item System design
+        \item Implementation of Frontend
+        \item Backend setup
+        \item Integration and testing
+        \item User acceptance testing and development
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Considerations:}
+\begin{itemize}
+    \item \textbf{Dependencies:} Mark dependencies between tasks to reflect the sequence of operations. For example, coding cannot start before the design is complete.
+    \item \textbf{Milestones:} Include milestones to mark significant achievements, such as completion of a phase or successful testing.
+    \item \textbf{Reviews:} Schedule regular reviews and updates to the Gantt chart as the project progresses to accommodate any changes.
+\end{itemize}
+
+\section{Project Planning Summary}
+The project planning for the online booking system, structured around function point analysis for time estimation and a detailed Gantt chart for scheduling, provides a clear and manageable roadmap for the project. This approach ensures that the project is completed on time, within scope, and meets all specified requirements.
